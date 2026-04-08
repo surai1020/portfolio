@@ -3,4 +3,32 @@ body {
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1rem;
+
+}
+nav ul,
+nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;
+  text-decoration: none;
+  margin-bottom: auto;
+  border-bottom: 1px solid oklch(80% 3% 20);
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 20);  
+  padding-bottom: 0.1em;            
 }
