@@ -1,3 +1,11 @@
+:root {
+  --color-accent: oklch(74.525% 0.12575 263.6);
+}
+
+html{
+  accent-color: var(--color-accent);
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -14,12 +22,11 @@ nav li {
 }
 
 nav {
-  display: flex;
+  display: flex; 
   text-decoration: none;
-  margin-bottom: auto;
+  margin-bottom: auto; 
   border-bottom: 1px solid oklch(80% 3% 20);
 }
-
 nav a {
   flex: 1;
   text-decoration: none;
@@ -31,4 +38,69 @@ nav a {
 nav a.current {
   border-bottom: 0.4em solid oklch(80% 3% 20);  
   padding-bottom: 0.1em;            
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  box-sizing: border-box;
+}
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 2em;
+}
+
+.projects article {
+  display: grid;   
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+  padding: 1em;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+body.resume{
+  max-width: 100ch;
+  margin: auto;
+  padding: 2rem;
+}
+
+.resume h2 {
+  margin-top:2rem;
+  border-bottom: 1px solid oklch(80% 3% 20);
 }
