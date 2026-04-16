@@ -1,5 +1,13 @@
 :root {
   --color-accent: oklch(74.525% 0.12575 263.6);
+  --border-color: oklch(50% 10% 200 / 40%);
+  color-scheme: light dark;
+}
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
 
 html{
@@ -25,7 +33,8 @@ nav {
   display: flex; 
   text-decoration: none;
   margin-bottom: auto; 
-  border-bottom: 1px solid oklch(80% 3% 20);
+  border-bottom-color: var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 nav a {
   flex: 1;
@@ -33,21 +42,19 @@ nav a {
   color: inherit;
   text-align: center;
   padding: 0.5em;
+
+  border-bottom: 0.2em solid transparent;
 }
 
-nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 20);  
-  padding-bottom: 0.1em;            
-}
-
+nav a.current,
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  padding-bottom: 0.1em;
+  border-bottom-color: var(--color-accent);
 }
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
   box-sizing: border-box;
 }
@@ -102,5 +109,5 @@ body.resume{
 
 .resume h2 {
   margin-top:2rem;
-  border-bottom: 1px solid oklch(80% 3% 20);
+  border-bottom: 1px solid var(--border-color);
 }
