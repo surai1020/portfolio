@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Image Processor & Day/Night Classifier",
+        "year" : "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Implemented image transformation pipeline (grayscale, inversion, edge highlighting) using vectorized NumPy operations.\nBuilt K-Nearest Neighbors classifier from scratch to distinguish day vs. Night images using pixel-intesity feature space.\nExtracted numerical feature vectors from image matrices to enable distance-based calculation.\nAdded audio-processor that allows an audio clip to be sped up, reversed, or reverb"
+    },
+    {
+        "title": "Goodreads User Preference Analysis",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Scraped and parsed 300+ book records from 2017-2022 to construct dataset of ratings, genres, descriptions, and tags.\nCleaned and normalized scraped HTML data into a structured tabular format for downstream modeling.\nEngineered structured features to compare pre- vs post-COVID reading trends using statistical analysis."
+    },
+    {
+        "title": "Food.com Recipe Tags Analysis",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed predictive regression model to estimate user engagement based on recipe metadata and tags.\nDesigned preprocessing workflow including feature encoding, normalization, and missing-data handling.\nPerformed exploratory data analysis to identify high-impact predictors prior to model training.\nEvaluated model performance using cross-validation and error analysis on website."
+    },
+    {
+        "title": "Taylor Swift Song Recommender Tool",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Uses data from Spotify to create a song recommender, and modifies it using the pandas module.\nUser inputs a Taylor Swift song and a song from the Billions Club that is the most similar is returned.\nChecks similarity by comparing features such as danceability, energy, and more by using Euclidean Distance.\nAlso utilizes TF-IDF (term frequency-inverse document frequency) to determine the single word that best represents the input Taylor Swift song."
+    },
+    {
+        "title": "Friends Reboot Logistics Tool",
+        "year" : "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Grabs data of the original Friends T.V show using the pandas module.\nCreated linear regression models to compare correlation between different features such as imdb rating and viewership.\nUsed episode IMDB ratings to determine the best reboot director.\nGenerated potential reboot episode titles using original episode titles, and discovered the probability of an reboot episode title being the same as an original episode title"
+    },
+    {
+        "title": "SoCal City GeoGuesser",
+        "year" : "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Trained a Convolutional Neural Network to classify images into Southern California cities (San Luis Obispo, Riverside, Anaheim, San Diego, Los Angeles, Bakersfield).\nAchieved 92% test accuracy through data preprocessing, augmentation, and hyperparameter tuning.\nImplemented in Python using TensorFlow/PyTorch."
+    },
+    {
+        "title": "Final Interactive Visualization",
+        "year" : "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "In Progress - Collaborating in a group to create visualization"
+    },
+    {
+        "title": "Final Data Mining Project",
+        "year" : "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "In Progress - Defining a research problem and designing my own model"
+    },
+    {
+        "title": "StarBaby Mini Shooter Game",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Collaborated on creating small shooting game using java. "
+    },
+    {
+        "title": "Life Simulator Mini Game",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Collaborated on creating small simulator game using java. "
+    },
+    {
+        "title": "MLS insights Dashoboard for IDXExchange",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "In Progress - Using real MLS data to generate dashboards to support business insights"
+    },
+    {
+        "title": "Arduino music player",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Used arduino/C++ to create music player that plays Für Elise or Carmelldansen when button is pressed"
+    }
+]
