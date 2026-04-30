@@ -6,43 +6,26 @@
     <title>Projects</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
+<div class = "container">
+    <svg id="projects-plot" viewBox="-50 -50 100 100"></svg>
+    <ul class="legend"></ul>
+</div>
+<input
+  class="searchBar"
+  type="search"
+  aria-label="Search projects"
+  placeholder="🔍 Search projects…"
+/>
+
+
 <body>
     <h1 class="projects-title">Projects</h1>
     <div class="projects">
         <script src="../global.js" type="module"></script>
         <script src="projects.js" type="module"></script>
     </div>
-
-    <div>
-            <b>Image Processor & Day/Night Classifier</b>
-            <i>Python, NumPy</i>
-            <ul>
-                <li><p>Implemented image transformation pipeline (grayscale, inversion, edge highlighting) using vectorized NumPy operations</p></li>
-                <li><p>Built K-Nearest Neighbors classifier from scratch to distinguish day vs. Night images using pixel-intesity feature space</p></li>
-                <li><p>Extracted numerical feature vectors from image matrices to enable distance-based calculation</p></li>
-                <li><p>Added audio-processor that allows an audio clip to be sped up, reversed, or reverb</p></li>
-            </ul>
-    </div>
-    <div>
-            <a href = "https://github.com/surai1020/goodreads-preference-analysis" target = "_blank">Goodreads User Preference Analysis</a>
-            <i>Python, Requests, BeautifulSoup, Pandas, Matplotlib</i>
-            <ul>
-                <li><p>Scraped and parsed 300+ book records from 2017-2022 to construct dataset of ratings, genres, descriptions, and tags</p></li>
-                <li><p>Cleaned and normalized scraped HTML data into a structured tabular format for downstream modeling</p></li>
-                <li><p>Engineered structured features to compare pre- vs post-COVID reading trends using statistical analysis</p></li>
-            </ul>
-    </div>
-    <div>
-            <a href = "https://surai1020.github.io/recipe-data-analysis/" target = "_blank">Food.com Recipe Tags Analysis</a>
-            <i>Python, Pandas, Scikit-learn, Plotly</i>
-            <ul>
-                <li><p>Developed predictive regression model to estimate user engagement based on recipe metadata and tags</p></li>
-                <li><p>Designed preprocessing workflow including feature encoding, normalization, and missing-data handling</p></li>
-                <li><p>Performed exploratory data analysis to identify high-impact predictors prior to model training</p></li>
-                <li><p>Evaluated model performance using cross-validation and error analysis on website</p></li>
-            </ul>
-    </div>
-        
     <script type="module" src="../global.js"></script>
 </body>
+
 </html>
