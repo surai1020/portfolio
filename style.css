@@ -181,3 +181,69 @@ dd {
   }
 }
 
+.gridlines line {
+  stroke: #ccc;
+  stroke-opacity: 0.3;
+  shape-rendering: crispEdges;
+}
+
+.gridlines path {
+  display: none;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+}
+
+dl.info dt {
+  margin: 0;
+  font-weight: 600;
+  color: #555; /* makes labels less prominent */
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 400;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: white;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+
+
