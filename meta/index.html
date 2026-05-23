@@ -6,6 +6,7 @@
         <title>Meta</title>
         <link rel="stylesheet" href="../style.css">
     </head>
+
     <body>
         <h1>Meta</h1>
 
@@ -16,16 +17,35 @@
         <dl id="language-breakdown" class="stats"></dl>
 
         <h2>Commits by time of day</h2>
-        <div id="chart"></div>
 
+        <div id="scrolly-1">
+
+            <div id="scatter-story">
+                some filler text here
+            </div>
+
+            <div id="scatter-plot">
+
+                <div id="chart"></div>
+
+                <div class="slider">
+                    <label>
+                        Show commits until:
+                        <input type="range" id="commit-progress" min="0" max="100">
+                        <time id="commit-time"></time>
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+        <dl id="files"></dl>
+        <!-- tooltip + stats etc -->
         <div id="stats"></div>
 
-        <!-- Commit tooltip -->
         <dl id="commit-tooltip" class="info tooltip" hidden>
             <dt>Commit</dt>
-            <dd>
-                <a href="" id="commit-link" target="_blank"></a>
-            </dd>
+            <dd><a href="" id="commit-link" target="_blank"></a></dd>
 
             <dt>Date</dt>
             <dd id="commit-date"></dd>

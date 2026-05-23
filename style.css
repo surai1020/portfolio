@@ -112,17 +112,29 @@ body.resume{
   border-bottom: 1px solid var(--border-color);
 }
 
-dl{
+.stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem 2rem;
+
+  margin-block: 2rem;
 }
 
-dt {
-  grid-row: 1;
+.stats dt {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: gray;
+
+  margin-bottom: 0.25rem;
 }
 
-dd {
-  grid-row: 2;
+.stats dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+
+  overflow-wrap: break-word;
 }
 
 .project-year {
@@ -210,40 +222,122 @@ dl.info dd {
 }
 
 .tooltip {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  background: white;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background: white;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 circle {
-  transition: 200ms;
-  transform-origin: center;
-  transform-box: fill-box;
+    @starting-style {
+        r: 0;
+    }
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 circle:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 dl.info {
-  /* ... other styles ... */
-  transition-duration: 500ms;
-  transition-property: opacity, visibility;
+    /* ... other styles ... */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
 }
 
 dl.info[hidden]:not(:hover, :focus-within) {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
 circle.selected {
-  fill: #ff6b6b;
+    fill: #ff6b6b;
+}
+
+.slider {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.slider label {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+#commit-time {
+    margin-left: auto;
+}
+
+#commit-progress {
+    flex: 1;
+}
+#files {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    > div {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+    }
+
+    dt {
+      grid-column: 1;
+    }
+
+    dd {
+      grid-column: 2;
+    }
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
 }
 
 
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
 
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
